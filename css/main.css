@@ -42,8 +42,17 @@ header p {
   font-style: italic;
 }
 
+main article:first-of-type {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+main article:last-child{
+  padding: 0 1rem;
+}
 article div {
   padding: 1rem;
+  background-color: #259f95;
 }
 
 article header {
@@ -54,7 +63,9 @@ article header {
   background-image: none;
   border-radius: 0 0 6px 6px;
   color: #fff;
+  padding: 0;
 }
+
 
 h1 {
   margin: 0;
@@ -70,7 +81,7 @@ h2 {
   font-size: 1.75rem;
 }
 
-nav ul {
+article nav ul {
   display: flex;
   align-items: center;
   list-style-type: none;
@@ -94,6 +105,7 @@ nav a {
 nav a:hover,
 nav a:focus {
   background-color: #1e7c74;
+  outline-color: #000;
 }
 
 .icon {
@@ -124,8 +136,7 @@ article div :first-child {
 }
 
 article div :first-child::first-line {
-  color: #1e7c74;
-  font-style: italic;
+  color: #fff;
 }
 
 figure {
@@ -157,4 +168,9 @@ footer {
   padding: 1rem;
   background-image: url("../images/anchors.svg");
   color: #fff;
+}
+
+article p:first-child::first-line {
+  color: #1e7c74;
+  font-style: italic;
 }
